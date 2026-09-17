@@ -1,0 +1,13 @@
+venv/
+dataset/
+features/
+frames/
+__pycache__/
+*.pyc
+*.avi
+*.mp4
+*.npy
+*.jpg
+*.jpeg
+*.png
+*.pth
