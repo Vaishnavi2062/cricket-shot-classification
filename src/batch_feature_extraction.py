@@ -127,7 +127,7 @@ for split in splits:
             try:
 
                 # ----------------------------------
-                # Extract 24 frames
+                # Extract 32 frames
                 # ----------------------------------
 
                 frames = load_video_frames(
@@ -137,16 +137,16 @@ for split in splits:
                 )
 
                 # Shape:
-                # (24, 224, 224, 3)
+                # (32, 224, 224, 3)
 
                 frames_tensor = torch.from_numpy(
                     frames
                 )
 
                 # Convert:
-                # (24, 224, 224, 3)
+                # (32, 224, 224, 3)
                 #       ↓
-                # (24, 3, 224, 224)
+                # (32, 3, 224, 224)
 
                 frames_tensor = frames_tensor.permute(
                     0, 3, 1, 2
@@ -173,7 +173,7 @@ for split in splits:
                     )
 
                 # Shape:
-                # (24, 1280)
+                # (32, 1280)
 
                 features = features.cpu().numpy()
 

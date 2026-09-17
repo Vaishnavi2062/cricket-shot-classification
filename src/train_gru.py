@@ -54,7 +54,7 @@ val_loader = DataLoader(
 
 model = CricketShotGRU(
     input_size=1280,
-    hidden_size=256,
+    hidden_size=512,
     num_layers=2,
     num_classes=10,
     dropout=0.3
@@ -89,7 +89,7 @@ scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
 # Training settings
 # -------------------------
 
-num_epochs = 20
+num_epochs = 10
 
 best_val_accuracy = 0.0
 patience = 5
@@ -97,8 +97,7 @@ epochs_without_improvement = 0
 
 os.makedirs("models", exist_ok=True)
 
-best_model_path = "models/cricket_shot_gru_best.pth"
-
+best_model_path = "models/cricket_shot_gru_24frames.pth"
 
 print("\nStarting improved training...\n")
 

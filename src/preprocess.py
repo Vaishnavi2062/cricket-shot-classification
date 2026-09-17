@@ -106,7 +106,7 @@ def load_video_frames(video_path, num_frames=24, save_frames=True):
 
     cap.release()
 
-    # If fewer than 24 frames were obtained,
+    # If fewer than 32 frames were obtained,
     # duplicate the last valid frame
     if len(frames) > 0 and len(frames) < num_frames:
 
